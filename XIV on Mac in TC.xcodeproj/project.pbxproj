@@ -45,6 +45,7 @@
 		07E8A67A2BD0AA11005AD41B /* DISCORD_TEAM_FLEET_03.dat in Resources */ = {isa = PBXBuildFile; fileRef = 07E8A6792BD0AA11005AD41B /* DISCORD_TEAM_FLEET_03.dat */; };
 		07FC7C2E28001EDA009A6FE0 /* FFXIVCFGCheckup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC7C2D28001EDA009A6FE0 /* FFXIVCFGCheckup.swift */; };
 		2B7C95D2277C6C6000A3CA89 /* SocialIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C95D1277C6C6000A3CA89 /* SocialIntegration.swift */; };
+		A1D15C0E2B7C95D300A3CA89 /* DiscordRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D15C0F2B7C95D300A3CA89 /* DiscordRelay.swift */; };
 		5010EFE427E4CE40001D2FEC /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5010EFE327E4CE40001D2FEC /* Encryption.swift */; };
 		5015D4C72881E97C004BA6D8 /* BunnyHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015D4C62881E97C004BA6D8 /* BunnyHUD.swift */; };
 		5015D4C92881EAF9004BA6D8 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015D4C82881EAF9004BA6D8 /* AddOn.swift */; };
@@ -151,6 +152,7 @@
 		07E8A6752BD0A524005AD41B /* DISCORD_TEAM_SEATHASKY_02.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = DISCORD_TEAM_SEATHASKY_02.dat; sourceTree = "<group>"; };
 		07E8A6792BD0AA11005AD41B /* DISCORD_TEAM_FLEET_03.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = DISCORD_TEAM_FLEET_03.dat; sourceTree = "<group>"; };
 		07FC7C2D28001EDA009A6FE0 /* FFXIVCFGCheckup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFXIVCFGCheckup.swift; sourceTree = "<group>"; };
+		A1D15C0F2B7C95D300A3CA89 /* DiscordRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordRelay.swift; sourceTree = "<group>"; };
 		2B7C95D1277C6C6000A3CA89 /* SocialIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialIntegration.swift; sourceTree = "<group>"; };
 		5010EFE327E4CE40001D2FEC /* Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryption.swift; sourceTree = "<group>"; };
 		5015D4C62881E97C004BA6D8 /* BunnyHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyHUD.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				50BD278627785418002B0D1F /* Notifications.swift */,
 				50ED0DB42773CA8C002E9854 /* Networking.swift */,
 				2B7C95D1277C6C6000A3CA89 /* SocialIntegration.swift */,
+				A1D15C0F2B7C95D300A3CA89 /* DiscordRelay.swift */,
 				07AAF893283F3D08003C10FA /* PrefixMigrator.swift */,
 				50511EC82770E087003A1E9F /* Assets.xcassets */,
 				50692C8A27B3E48B00945593 /* Credits.html */,
@@ -687,6 +690,7 @@
 				0762AB8E2973A09A00A4D6E0 /* SettingsView.swift in Sources */,
 				0762AB962973AEF100A4D6E0 /* SettingsAdvancedTabView.swift in Sources */,
 				2B7C95D2277C6C6000A3CA89 /* SocialIntegration.swift in Sources */,
+				A1D15C0E2B7C95D300A3CA89 /* DiscordRelay.swift in Sources */,
 				5015D4C92881EAF9004BA6D8 /* AddOn.swift in Sources */,
 				07B5C83729C7AFCC0092C5C6 /* SettingsCaptureView.swift in Sources */,
 				5077A32C27C12A9100D4F1B8 /* Settings.swift in Sources */,

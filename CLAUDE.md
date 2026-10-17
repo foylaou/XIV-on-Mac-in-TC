@@ -105,6 +105,7 @@ DXMT 是預設後端（macOS 14+），提供更好的 Metal 整合。DXVK 作為
 
 - 登入使用 WebView 嵌入台灣版登入頁面，整合 reCAPTCHA
 - 維護檢查預設停用（`Frontier.loginMaintenance` / `Frontier.gameMaintenance`）
-- Dalamud 插件系統目前停用
-- 自動登入功能停用
+- Dalamud 設定頁與自訂版本檢查已存在（`SettingsPluginsTabView`），實際於台灣版的可用性需實機確認
+- 自動登入選項存在（`LaunchController`），台灣版行為需實機確認
+- Discord Rich Presence 由 `DiscordBridge`（`SocialIntegration.swift`）將 xbridge 安裝為 Wine service，不需要 Dalamud 外掛；啟用狀態會跨 prefix 重建保留
 - Wine 區域設定為 zh-TW（0404）

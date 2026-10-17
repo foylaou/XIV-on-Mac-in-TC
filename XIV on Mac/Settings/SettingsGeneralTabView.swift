@@ -188,15 +188,9 @@ struct SettingsGeneralTabView: View {
                             Text("SETTINGS_GENERAL_DISCORD_STATUS")
                             Circle()
                                 .frame(width: 8, height: 8)
-                                .foregroundColor(
-                                    viewModel.discordInstalled ? .green : .secondary)
-                            Text(
-                                viewModel.discordInstalled
-                                    ? "SETTINGS_GENERAL_DISCORD_INSTALLED"
-                                    : "SETTINGS_GENERAL_DISCORD_NOT_INSTALLED"
-                            )
-                            .foregroundColor(
-                                viewModel.discordInstalled ? .green : .secondary)
+                                .foregroundColor(viewModel.discordStatusColor)
+                            Text(viewModel.discordStatusKey)
+                                .foregroundColor(viewModel.discordStatusColor)
                             if viewModel.discordOperating {
                                 ProgressView().scaleEffect(0.7)
                             }
@@ -208,15 +202,23 @@ struct SettingsGeneralTabView: View {
                                 viewModel.installDiscord()
                             }
                             .disabled(
-                                viewModel.discordInstalled || viewModel.discordOperating)
+                                viewModel.discordStatus == .running || viewModel.discordOperating)
 
                             Button("SETTINGS_GENERAL_DISCORD_UNINSTALL_BTN") {
                                 viewModel.uninstallDiscord()
                             }
                             .disabled(
-                                !viewModel.discordInstalled || viewModel.discordOperating)
+                                viewModel.discordStatus == .notInstalled
+                                    || viewModel.discordOperating)
 
                             Spacer()
+                        }
+
+                        if let error = viewModel.discordError {
+                            Text(error)
+                                .font(.callout)
+                                .foregroundColor(.red)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
                     Spacer(minLength: 140)
@@ -228,6 +230,7 @@ struct SettingsGeneralTabView: View {
             Image(nsImage: NSImage(named: "PrefsGeneral") ?? NSImage())
                 .padding()
         }
+        .onAppear { viewModel.refreshDiscordStatus() }
     }
 }
 
@@ -275,15 +278,47 @@ extension SettingsGeneralTabView {
             didSet { Wine.rightCommandIsCtrl = rightCommandIsCtrl }
         }
 
-        @Published var discordInstalled: Bool = DiscordBridge.isInstalled
+        @Published var discordStatus: DiscordBridge.Status = .notInstalled
         @Published var discordOperating: Bool = false
+        @Published var discordError: String?
+
+        var discordStatusKey: LocalizedStringKey {
+            switch discordStatus {
+            case .running: return "SETTINGS_GENERAL_DISCORD_RUNNING"
+            case .stopped: return "SETTINGS_GENERAL_DISCORD_STOPPED"
+            case .notInstalled: return "SETTINGS_GENERAL_DISCORD_NOT_INSTALLED"
+            }
+        }
+
+        var discordStatusColor: Color {
+            switch discordStatus {
+            case .running: return .green
+            case .stopped: return .orange
+            case .notInstalled: return .secondary
+            }
+        }
+
+        func refreshDiscordStatus() {
+            Task {
+                let status = await Task.detached { DiscordBridge.status }.value
+                await MainActor.run { discordStatus = status }
+            }
+        }
 
         func installDiscord() {
             discordOperating = true
+            discordError = nil
             Task {
-                await DiscordBridge.install()
+                var message: String?
+                do {
+                    try await DiscordBridge.install()
+                } catch {
+                    message = error.localizedDescription
+                }
+                let status = await Task.detached { DiscordBridge.status }.value
                 await MainActor.run {
-                    discordInstalled = DiscordBridge.isInstalled
+                    discordError = message
+                    discordStatus = status
                     discordOperating = false
                 }
             }
@@ -291,10 +326,12 @@ extension SettingsGeneralTabView {
 
         func uninstallDiscord() {
             discordOperating = true
+            discordError = nil
             Task {
                 await DiscordBridge.uninstall()
+                let status = await Task.detached { DiscordBridge.status }.value
                 await MainActor.run {
-                    discordInstalled = DiscordBridge.isInstalled
+                    discordStatus = status
                     discordOperating = false
                 }
             }

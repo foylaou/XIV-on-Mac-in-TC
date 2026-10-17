@@ -80,6 +80,8 @@ import XIVLauncher
                 Log.error("[Wine] Prefix initialization failed: \(error.localizedDescription)")
                 NSAlert(error: error).runModal()
                 NSApp.terminate(self)
+            } else {
+                Task { await DiscordBridge.restoreIfNeeded() }
             }
         }
         let storyboard = NSStoryboard(name: "Main", bundle: nil)

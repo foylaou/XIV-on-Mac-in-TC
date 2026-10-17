@@ -181,7 +181,12 @@
 "SETTINGS_GENERAL_DISCORD_TITLE" = "Discord Rich Presence";
 "SETTINGS_GENERAL_DISCORD_BLURB" = "xbridgeはゲームプロセスを自動検出し、Discordのステータスを更新します。";
 "SETTINGS_GENERAL_DISCORD_STATUS" = "xbridgeの状態：";
-"SETTINGS_GENERAL_DISCORD_INSTALLED" = "インストール済み";
+"SETTINGS_GENERAL_DISCORD_RUNNING" = "実行中";
+"SETTINGS_GENERAL_DISCORD_STOPPED" = "インストール済み（未実行）";
+"DISCORD_ERR_WINE_NOT_READY" = "Wineを起動中です。しばらくしてからもう一度お試しください。";
+"DISCORD_ERR_DOWNLOAD" = "xbridgeをダウンロードできませんでした。ネットワーク接続を確認してください。";
+"DISCORD_ERR_VERIFY" = "ダウンロードしたxbridgeが整合性検証に失敗したため破棄しました。";
+"DISCORD_ERR_INSTALL" = "xbridgeはインストールされましたが、サービスが起動しませんでした。Wine prefix内のC:\\windows\\logs\\xbridge.logを確認してください。";
 "SETTINGS_GENERAL_DISCORD_NOT_INSTALLED" = "未インストール";
 "SETTINGS_GENERAL_DISCORD_INSTALL_BTN" = "xbridgeをインストール";
 "SETTINGS_GENERAL_DISCORD_UNINSTALL_BTN" = "xbridgeを削除";
@@ -244,8 +249,6 @@
 "SETTINGS_PLUGINS_DALAMUD_DELAY_BLURB" = "Dalamudのロードがうまくいかない場合は、ロードの遅延秒数を適宜調整して、お使いのMacに合う値を探してみてください。";
 "SETTINGS_PLUGINS_DALAMUD_DELAY_UNITS" = "秒";
 "SETTINGS_PLUGINS_DALAMUD_DELAY_LABEL" = "遅延:";
-"SETTINGS_PLUGINS_DISCORD_BLURB" = "以下をチェックするとDalamudのDiscord Rich Presenceプラグインを利用可能にし、Discord のステータスを更新できるようになります。このプラグインを使用する予定がない場合は、この設定を無効できます。";
-"SETTINGS_PLUGINS_DISCORD_TOGGLE" = "Discord Rich Presence Wineブリッジ";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_BLURB" = "使用する Dalamud のブランチを選択します。ベータキーを入力すると非表示のブランチが表示されます。";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_LABEL" = "ブランチ";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_UNAVAILABLE" = "このブランチは現在のゲームバージョンでは利用できません。";

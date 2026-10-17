@@ -178,7 +178,12 @@
 "SETTINGS_GENERAL_DISCORD_TITLE" = "Discord Rich Presence";
 "SETTINGS_GENERAL_DISCORD_BLURB" = "xbridge 可自動偵測遊戲程序並更新 Discord 狀態。";
 "SETTINGS_GENERAL_DISCORD_STATUS" = "xbridge 狀態：";
-"SETTINGS_GENERAL_DISCORD_INSTALLED" = "已安裝";
+"SETTINGS_GENERAL_DISCORD_RUNNING" = "執行中";
+"SETTINGS_GENERAL_DISCORD_STOPPED" = "已安裝，未執行";
+"DISCORD_ERR_WINE_NOT_READY" = "Wine 仍在啟動中，請稍後再試。";
+"DISCORD_ERR_DOWNLOAD" = "無法下載 xbridge，請檢查網路連線。";
+"DISCORD_ERR_VERIFY" = "下載的 xbridge 未通過完整性驗證，已捨棄。";
+"DISCORD_ERR_INSTALL" = "xbridge 已安裝但服務未啟動。請查看 Wine prefix 內的 C:\\windows\\logs\\xbridge.log。";
 "SETTINGS_GENERAL_DISCORD_NOT_INSTALLED" = "未安裝";
 "SETTINGS_GENERAL_DISCORD_INSTALL_BTN" = "安裝 xbridge";
 "SETTINGS_GENERAL_DISCORD_UNINSTALL_BTN" = "移除 xbridge";
@@ -242,8 +247,6 @@
 "SETTINGS_PLUGINS_DALAMUD_DELAY_BLURB" = "如果 Dalamud 沒有成功載入，你可以嘗試調整載入延遲的時間，增加或減少，來找到適合你 Mac 的數值。";
 "SETTINGS_PLUGINS_DALAMUD_DELAY_UNITS" = "秒";
 "SETTINGS_PLUGINS_DALAMUD_DELAY_LABEL" = "延遲：";
-"SETTINGS_PLUGINS_DISCORD_BLURB" = "此橋接功能可讓 Discord Rich Presence Dalamud 擴充套件更新你的 Discord 狀態。如果你不打算使用這個擴充套件，可以停用這個設定。";
-"SETTINGS_PLUGINS_DISCORD_TOGGLE" = "Discord Rich Presence Wine 橋接";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_BLURB" = " ";
 
 // Advanced Settings tab items

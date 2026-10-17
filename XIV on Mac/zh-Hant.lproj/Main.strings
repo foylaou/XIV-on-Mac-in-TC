@@ -185,8 +185,6 @@
 /* Class = "NSTextFieldCell"; title = "XIV on Mac can identify potential problems, or make recommended changes to your FFXIV Configuration file to give you the best experience available on the Mac."; ObjectID = "Dv8-bd-owY"; */
 "Dv8-bd-owY.title" = "XIV on Mac in TC 可以協助偵測潛在問題，或對你的 FFXIV 設定檔提出建議修改，讓你在 Mac 上獲得最佳體驗。";
 
-/* Class = "NSButtonCell"; title = "Discord Rich Presence Wine Bridge"; ObjectID = "EJl-D1-TzE"; */
-"EJl-D1-TzE.title" = "Discord Rich Presence Wine 橋接";
 
 /* Class = "NSTabViewItem"; label = "Select Version"; ObjectID = "Ebe-6x-j5a"; */
 "Ebe-6x-j5a.label" = "選擇版本";

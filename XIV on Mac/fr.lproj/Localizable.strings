@@ -177,7 +177,12 @@ Ne l'activez pas sur les écrans autres que écrans Retina, sauf à des fins de 
 "SETTINGS_GENERAL_DISCORD_TITLE" = "Discord Rich Presence";
 "SETTINGS_GENERAL_DISCORD_BLURB" = "xbridge détecte automatiquement les processus du jeu et met à jour votre statut Discord.";
 "SETTINGS_GENERAL_DISCORD_STATUS" = "État de xbridge :";
-"SETTINGS_GENERAL_DISCORD_INSTALLED" = "Installé";
+"SETTINGS_GENERAL_DISCORD_RUNNING" = "En cours d'exécution";
+"SETTINGS_GENERAL_DISCORD_STOPPED" = "Installé, non démarré";
+"DISCORD_ERR_WINE_NOT_READY" = "Wine est encore en cours de démarrage. Réessayez dans un instant.";
+"DISCORD_ERR_DOWNLOAD" = "Impossible de télécharger xbridge. Vérifiez votre connexion réseau.";
+"DISCORD_ERR_VERIFY" = "Le xbridge téléchargé a échoué à la vérification d'intégrité et a été supprimé.";
+"DISCORD_ERR_INSTALL" = "xbridge a été installé mais le service n'a pas démarré. Consultez C:\\windows\\logs\\xbridge.log dans le prefix Wine.";
 "SETTINGS_GENERAL_DISCORD_NOT_INSTALLED" = "Non installé";
 "SETTINGS_GENERAL_DISCORD_INSTALL_BTN" = "Installer xbridge";
 "SETTINGS_GENERAL_DISCORD_UNINSTALL_BTN" = "Supprimer xbridge";
@@ -241,8 +246,6 @@ Ne l'activez pas sur les écrans autres que écrans Retina, sauf à des fins de 
 "SETTINGS_PLUGINS_DALAMUD_DELAY_BLURB" = "Si Dalamud ne fonctionne pas correctement, vous pouvez essayer d'augmenter ou diminuer le délai pour trouver une valeur qui fonctionne pour votre Mac.";
 "SETTINGS_PLUGINS_DALAMUD_DELAY_UNITS" = "secondes";
 "SETTINGS_PLUGINS_DALAMUD_DELAY_LABEL" = "Délai :";
-"SETTINGS_PLUGINS_DISCORD_BLURB" = "Le \"Bridge\" permet au plugin \"Discord Rich Presence Dalamud\" de mettre à jour votre statut Discord. Si vous ne prévoyez pas d'utiliser ce plugin, vous pouvez désactiver ce paramètre.";
-"SETTINGS_PLUGINS_DISCORD_TOGGLE" = "Discord Rich Presence Wine Bridge";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_BLURB" = "Choisissez la branche de Dalamud à utiliser. Les branches masquées sont révélées en entrant une clé bêta.";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_LABEL" = "Branche";
 "SETTINGS_PLUGINS_DALAMUD_BRANCH_UNAVAILABLE" = "Cette branche n’est pas disponible pour la version actuelle du jeu.";

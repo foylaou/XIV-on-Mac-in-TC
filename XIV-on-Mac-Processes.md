@@ -21,7 +21,7 @@
 2. 顯示登入表單，設定憑證（`Settings.credentials`）。
 3. 異步執行：
    - 檢查遊戲安裝：`FFXIVApp().installed`。
-   - 設定 Discord 存在：`DiscordBridge.setPresence()`。
+   - 啟動遊戲前寫入 `DISCORD_IPC_PATH`：`DiscordBridge.refreshIpcPath()`（於 `LoginResult.startGame`；Rich Presence 由 Wine prefix 內的 xbridge service 處理）。
    - 確保圖形後端：`GraphicsInstaller.ensureBackend()`。
    - 檢查登入維護：`Frontier.loginMaintenance`（發出 GET 請求至 https://frontier.ffxiv.com/worldStatus/login_status.json?_={timestamp}）。
    - 建立登入結果：`LoginResult(repair)`（呼叫 XIVLauncher 原生登入函數）。
